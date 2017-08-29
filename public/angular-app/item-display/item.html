@@ -1,0 +1,4 @@
+<h1> {{ vm.item.name}} </h1>
+<p>Price: {{ vm.item.price | currency:"£" }}</p>
+<p>Description: {{ vm.item.description }}</p>
+<button type="button" ng-disabled="vm.item.stock  == 0">{{ vm.button }}</button>

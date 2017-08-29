@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var dburl = 'mongodb://localhost:27017/sendmerandom';
 var retry = null;
-mongoose.connect(dburl);
+mongoose.connect(dburl, { useMongoClient: true });
 
 // CONNECTION EVENTS
 mongoose.connection.on('connected', function() {
@@ -37,3 +37,5 @@ process.on('SIGINT', function() {
 });
 
 // BRING IN YOUR SCHEMAS & MODELS
+require("./items.model");
+require("./users.model");

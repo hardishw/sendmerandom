@@ -18,6 +18,10 @@
   },
   "homepage": "https://github.com/hardishw/sendmerandom#readme",
   "dependencies": {
+    "angular": "^1.6.6",
+    "angular-jwt": "^0.1.9",
+    "angular-route": "^1.6.6",
+    "bcrypt": "^1.0.3",
     "body-parser": "^1.17.2",
     "express": "^4.15.4",
     "mongoose": "^4.11.9"

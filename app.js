@@ -1,3 +1,4 @@
+require("./api/data/dbconnection.js");
 var express = require("express");
 var app = express();
 var path = require("path");
@@ -28,5 +29,5 @@ app.use("/api", routes);
 // Listen for requests
 var server = app.listen(app.get("port"), function() {
   var port = server.address().port;
-  console.log("Magic happens on port " + port);
+  console.log("Listening on port " + port);
 });
