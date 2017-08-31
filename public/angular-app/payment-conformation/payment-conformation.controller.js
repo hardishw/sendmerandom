@@ -34,7 +34,15 @@ function PaymentConformation($http,$location) {
     //   vm.output = body;
     // });
 
-    var vm.output.data = $http.get("/api/pdt/" + tx);
+    vm.output = $http.get("/api/pdt/" + tx).then(complete).catch(failed);
 
 
+  }
+
+  function complete(response) {
+    return response;
+  }
+
+  function failed(error) {
+    console.log(error.statusText);
   }

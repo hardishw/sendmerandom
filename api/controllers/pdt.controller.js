@@ -32,7 +32,5 @@ module.exports.pdt = function (req, res) {
     res
       .status(200)
       .send(body);
-
-    return console.log(body);
   });
 }
