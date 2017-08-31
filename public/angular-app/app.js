@@ -15,5 +15,10 @@ function config($routeProvider) {
       templateUrl: "angular-app/item-display/item.html",
       controller: ItemController,
       controllerAs: "vm"
+    })
+    .when("/product-summary",{
+      templateUrl: "",
+      controller: "",
+      controllerAs: ""
     });
 }
