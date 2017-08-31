@@ -12,7 +12,7 @@ var _splitArray = function(input){
   return output;
 }
 
-function PaymentConformation($location) {
+function PaymentConformation($http,$location) {
   var vm = this;
 
     var tx = $location.search().tx;
@@ -30,7 +30,11 @@ function PaymentConformation($location) {
       }
     };
 
-    request.post('https://' + endpoint + '/cgi-bin/webscr', options, function(e, r, body) {
-      vm.output = body;
-    });
+    // request.post('https://' + endpoint + '/cgi-bin/webscr', options, function(e, r, body) {
+    //   vm.output = body;
+    // });
+
+    var vm.output.data = $http.get("/api/pdt/" + tx);
+
+
   }

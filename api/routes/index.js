@@ -13,7 +13,7 @@ router
   .post(ipnCtrl.verify);
 
 router
-  .route("/pdt/")
+  .route("/pdt/:tx")
   .get(pdtCtrl.pdt);
 
 // Items routes

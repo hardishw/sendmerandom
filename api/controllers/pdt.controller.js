@@ -13,7 +13,7 @@ var _splitArray = function(input){
 }
 
 module.exports.pdt = function (req, res) {
-  var tx = req.query.tx;
+  var tx = req.params.tx;
   var auth = "ckGG2iC_2vrUMkqiuiv1nv37Gjoju3BrFtiWcWHPbLMDaMG2PGjht6de4Uy";
   var endpoint = 'www.sandbox.paypal.com';
 
@@ -32,7 +32,7 @@ module.exports.pdt = function (req, res) {
     res
       .status(200)
       .send(body);
-      
+
     return console.log(body);
   });
 }
