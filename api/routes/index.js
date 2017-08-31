@@ -5,11 +5,16 @@ var router = express.Router();
 var itemsCtrl = require("../controllers/items.controllers");
 var reviewCtrl = require("../controllers/reviews.controllers");
 var ipnCtrl = require("../controllers/ipn.controller");
+var pdtCtrl = require("../controllers/pdt.controller");
 
 // Paypal ipn routes
 router
   .route("/ipn")
   .post(ipnCtrl.verify);
+
+router
+  .route("/pdt")
+  .get(pdtCtrl.pdt);
 
 // Items routes
 router
