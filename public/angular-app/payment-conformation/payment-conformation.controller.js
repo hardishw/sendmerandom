@@ -1,7 +1,5 @@
 angular.module("sendmerandom").controller("PaymentConformation",PaymentConformation);
 
-var request = require('request');
-
 var _splitArray = function(input){
   var output
 
@@ -14,7 +12,7 @@ var _splitArray = function(input){
   return output;
 }
 
-function PaymentConformation() {
+function PaymentConformation($location) {
   var vm = this;
 
     var tx = $location.search().tx;
@@ -36,5 +34,3 @@ function PaymentConformation() {
       vm.output = body;
     });
   }
-
-}
