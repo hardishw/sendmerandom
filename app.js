@@ -7,7 +7,7 @@ var bodyParser = require("body-parser");
 var routes = require("./api/routes");
 
 // Set port to listen on
-app.set("port", 3001);
+app.set("port", 3000);
 
 // Middleware to log incoming requests
 app.use(function(req, res, next){

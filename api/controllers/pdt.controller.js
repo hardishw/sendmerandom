@@ -1,8 +1,8 @@
 var request = require('request');
 
-var pdt = function (res, req) {
-  var tx = req.body.tx;
-  var auth = "SciYlojZ6ClD9sHFE_-G0ujdIK5_4rDItZj3V7Jzpwd7lFWtNTDXffUfUsG";
+module.exports.pdt = function (req, res) {
+  var tx = req.query.tx;
+  var auth = "ckGG2iC_2vrUMkqiuiv1nv37Gjoju3BrFtiWcWHPbLMDaMG2PGjht6de4Uy";
   var endpoint = 'www.sandbox.paypal.com';
 
   var options = {
