@@ -16,9 +16,9 @@ function config($routeProvider) {
       controller: ItemController,
       controllerAs: "vm"
     })
-    .when("/product-summary",{
-      templateUrl: "",
-      controller: "",
-      controllerAs: ""
-    });
+    .when("/payment-conformation",{
+      templateUrl: "angular-app/payment-conformation/payment-conformation.html",
+      controller: PaymentConformation,
+      controllerAs: "vm"
+    })
 }

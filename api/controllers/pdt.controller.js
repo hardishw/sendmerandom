@@ -1,5 +1,17 @@
 var request = require('request');
 
+var _splitArray = function(input){
+  var output
+
+  if (input && input.length > 0){
+    output = input.split("\n");
+  } else {
+    output = [];
+  }
+
+  return output;
+}
+
 module.exports.pdt = function (req, res) {
   var tx = req.query.tx;
   var auth = "ckGG2iC_2vrUMkqiuiv1nv37Gjoju3BrFtiWcWHPbLMDaMG2PGjht6de4Uy";
@@ -20,6 +32,7 @@ module.exports.pdt = function (req, res) {
     res
       .status(200)
       .send(body);
+      
     return console.log(body);
   });
 }
