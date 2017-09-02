@@ -1,6 +1,9 @@
 <div class="container">
-  <p><a href="#!/">home</a> > <a href="#!/products/">products</a> > {{ vm.item.name }}</p>
-  <br>
+  <ul class="breadcrumb">
+    <li><a href="#!/">home</a></li>
+    <li><a href="#!/products">products</a></li>
+    <li class="active">{{ vm.item.name }}</li>
+  </ul>
 </div>
 <div class="alert alert-dismissible alert-info container">
   <button type="button" class="close" data-dismiss="alert">&times;</button>

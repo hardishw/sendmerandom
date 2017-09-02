@@ -23,5 +23,8 @@ function config($routeProvider) {
     })
     .when("/contact-us",{
       templateUrl: "angular-app/contact-us/contact-us.html"
+    })
+    .when("/how-it-works",{
+      templateUrl: "angular-app/how-it-works/how-it-works.html"
     });
 }
