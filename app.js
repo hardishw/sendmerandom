@@ -3,6 +3,9 @@ var express = require("express");
 var app = express();
 var path = require("path");
 var bodyParser = require("body-parser");
+var env = require('node-env-file');
+
+env(__dirname + "/.env");
 
 var routes = require("./api/routes");
 

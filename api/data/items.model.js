@@ -24,10 +24,14 @@ var itemSchema = new mongoose.Schema({
     type: Number,
     required: true
   },
-  stock : {
+  stock: {
     required: true,
     type: Number,
     min: 0
+  },
+  buttonId: {
+    type: String,
+    required: true
   },
   description: String,
   images: [String],

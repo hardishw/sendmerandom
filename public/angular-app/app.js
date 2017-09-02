@@ -21,4 +21,7 @@ function config($routeProvider) {
       controller: PaymentConformation,
       controllerAs: "vm"
     })
+    .when("/contact-us",{
+      templateUrl: "angular-app/contact-us/contact-us.html"
+    });
 }

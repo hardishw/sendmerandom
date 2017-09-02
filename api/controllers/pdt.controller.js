@@ -15,7 +15,7 @@ var _splitArray = function(input){
 module.exports.pdt = function (req, res) {
   var tx = req.params.tx;
   var auth = "ckGG2iC_2vrUMkqiuiv1nv37Gjoju3BrFtiWcWHPbLMDaMG2PGjht6de4Uy";
-  var endpoint = 'www.sandbox.paypal.com';
+  var endpoint = 'sandbox.';
 
   var options = {
     form: {
@@ -28,7 +28,7 @@ module.exports.pdt = function (req, res) {
     }
   };
 
-  request.post('https://' + endpoint + '/cgi-bin/webscr', options, function(e, r, body) {
+  request.post('https://www.' + endpoint + 'paypal.com/cgi-bin/webscr', options, function(e, r, body) {
     res
       .status(200)
       .send(body);

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)http://localhost:3000/#!/product/59a5b0c079d1a00d01867e22 -->
+<html ng-app="sendmerandom" class="ng-scope"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+  <title>Send Me Random!</title>
+  <link rel="stylesheet" href="./Send Me Random!_files/bootstrap.min.css">
+  <script src="./Send Me Random!_files/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="./Send Me Random!_files/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+  <script src="./Send Me Random!_files/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+<style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style></head>
+<body>
+
+  <mh-navigation><nav ng-controller="NavBarController as vm" class="navbar navbar-default ng-scope">
+  <div class="container">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand ng-binding" ng-href="#!/" href="http://localhost:3000/#!/">S3nd M3 R@nd0m!</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a ng-href="#!/how-it-works" href="http://localhost:3000/#!/how-it-works">How it works</a></li>
+        <li class="dropdown">
+          <a href="http://localhost:3000/" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Products<span class="caret"></span></a>
+          <ul ng-controller="ItemsController as vm" class="dropdown-menu ng-scope" role="menu">
+            <li><a href="http://localhost:3000/#!/products">All</a></li>
+            <li class="divider"></li>
+            <!-- ngRepeat: item in vm.items --><li ng-repeat="item in vm.items" class="ng-scope"><a ng-href="#!/product/59a5b0a579d1a00d01867e21" class="ng-binding" href="http://localhost:3000/#!/product/59a5b0a579d1a00d01867e21">Mystery Box</a></li><!-- end ngRepeat: item in vm.items --><li ng-repeat="item in vm.items" class="ng-scope"><a ng-href="#!/product/59a5b0c079d1a00d01867e22" class="ng-binding" href="http://localhost:3000/#!/product/59a5b0c079d1a00d01867e22">Ama zingMystery Box</a></li><!-- end ngRepeat: item in vm.items --><li ng-repeat="item in vm.items" class="ng-scope"><a ng-href="#!/product/59a5b10479d1a00d01867e23" class="ng-binding" href="http://localhost:3000/#!/product/59a5b10479d1a00d01867e23">Amazing Mystery Box</a></li><!-- end ngRepeat: item in vm.items -->
+          </ul>
+        </li>
+        <li><a ng-href="#!/contact-us" href="http://localhost:3000/#!/contact-us">Contact us</a></li>
+      </ul>
+      <!-- <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form> -->
+      <form class="navbar-form navbar-right ng-pristine ng-valid" target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+            <div class="form-group">
+              <input type="hidden" name="cmd" value="_s-xclick" autocomplete="off">
+              <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----" autocomplete="off">
+            </div>
+            <button type="submit" class="btn btn-default">shopping cart</button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="http://localhost:3000/#">Profile</a></li>
+        <li><a href="http://localhost:3000/#">Login/Sign up</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</nav>
+</mh-navigation>
+  <!-- ngView: --><div ng-view="" class="ng-scope"><div class="container ng-scope">
+  <h1 class="ng-binding"> Ama zingMystery Box </h1>
+  <hr>
+  <div class="row">
+    <div class="col-sm-6">
+      <img src="./Send Me Random!_files/box.jpg" width="500px">
+    </div>
+    <div class="col-sm-4">
+      <ul class="list-group">
+        <li class="list-group-item">
+            <p class="ng-binding">Price: £10.00</p>
+        </li>
+        <li class="list-group-item">
+          <!-- ngRepeat: i in [1,2,3,4,5] --><img ng-repeat="i in [1,2,3,4,5]" src="./Send Me Random!_files/glyphicons-49-star-empty.png" class="ng-scope"><!-- end ngRepeat: i in [1,2,3,4,5] --><img ng-repeat="i in [1,2,3,4,5]" src="./Send Me Random!_files/glyphicons-49-star-empty.png" class="ng-scope"><!-- end ngRepeat: i in [1,2,3,4,5] --><img ng-repeat="i in [1,2,3,4,5]" src="./Send Me Random!_files/glyphicons-49-star-empty.png" class="ng-scope"><!-- end ngRepeat: i in [1,2,3,4,5] --><img ng-repeat="i in [1,2,3,4,5]" src="./Send Me Random!_files/glyphicons-49-star-empty.png" class="ng-scope"><!-- end ngRepeat: i in [1,2,3,4,5] --><img ng-repeat="i in [1,2,3,4,5]" src="./Send Me Random!_files/glyphicons-49-star-empty.png" class="ng-scope"><!-- end ngRepeat: i in [1,2,3,4,5] -->
+        </li>
+        <li class="list-group-item">
+          <form target="paypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" class="ng-pristine ng-valid">
+          <input type="hidden" name="cmd" value="_s-xclick" autocomplete="off">
+          <input type="hidden" name="hosted_button_id" value="E89RB4V56KRLG" autocomplete="off">
+          <button type="submit" class="btn btn-primary ng-binding" ng-disabled="(vm.stock &lt; 1 ) || vm.show">Add To Cart</button>
+          </form>
+
+        </li>
+      </ul>
+    </div>
+  </div>
+  <hr>
+<div class="well well-lg container">
+  <p class="ng-binding"><strong>Description</strong>: An amazing mystery Box</p>
+</div>
+<ul class="nav nav-tabs">
+  <li class="" aria-expanded="false"><a data-target="#home" data-toggle="tab" aria-expanded="true" class="active">Home</a></li>
+  <li><a data-target="#profile" data-toggle="tab" aria-expanded="false" class="">Profile</a></li>
+  <li class="disabled"><a>Disabled</a></li>
+  <li class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="http://localhost:3000/#" aria-expanded="false">
+      Dropdown <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+      <li><a href="http://localhost:3000/#dropdown1" data-toggle="tab">Action</a></li>
+      <li class="divider"></li>
+      <li><a href="http://localhost:3000/#dropdown2" data-toggle="tab">Another action</a></li>
+    </ul>
+  </li>
+</ul>
+<div id="myTabContent" class="tab-content">
+  <div class="tab-pane fade active show" id="home" aria-expanded="true">
+    <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+  </div>
+  <div class="tab-pane fade in" id="profile" aria-expanded="false">
+    <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit.</p>
+  </div>
+  <div class="tab-pane fade" id="dropdown1">
+    <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork.</p>
+  </div>
+  <div class="tab-pane fade" id="dropdown2">
+    <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater.</p>
+  </div>
+</div>
+</div>
+</div>
+
+  <script src="./Send Me Random!_files/angular.js"></script>
+  <script src="./Send Me Random!_files/angular-route.js"></script>
+  <script src="./Send Me Random!_files/angular-jwt.js"></script>
+  <script src="./Send Me Random!_files/app.js"></script>
+  <script src="./Send Me Random!_files/items.controller.js"></script>
+  <script src="./Send Me Random!_files/item.controller.js"></script>
+  <script src="./Send Me Random!_files/item-data-factory.js"></script>
+  <script src="./Send Me Random!_files/navigation-bar-directive.js"></script>
+  <script src="./Send Me Random!_files/nav-bar.controller.js"></script>
+  <script src="./Send Me Random!_files/payment-conformation.controller.js"></script>
+
+
+</body></html>

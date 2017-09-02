@@ -26,6 +26,10 @@ router
   .route("/items/:itemId")
   .get(itemsCtrl.itemsGetOne);
 
+router
+  .route("/items/:itemId/stock")
+  .get(itemsCtrl.itemsGetStock);
+
 // User Address routes
 
 // Item Review routes

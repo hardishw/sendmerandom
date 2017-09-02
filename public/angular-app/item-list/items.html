@@ -1,6 +1,18 @@
-<ul class="container">
-  <div ng-repeat="item in vm.items">
-  <li><a ng-href="#!/product/{{ item._id }}">{{ item.name }}</a> <img src="images/box.jpg" width="20%"></li>
-  <hr>
-  <div>
+<div class="container">
+  <p><a href="#!/">home</a> > products</p>
+  <br>
+</div>
+<ul class="list-group container">
+  <li ng-repeat="item in vm.items" class="list-group-item">
+    <div class="row">
+      <div class="col-sm-2">
+        <img src="images/box.jpg" class="img-responsive">
+      </div>
+      <div class="col-sm-2">
+        <a ng-href="#!/product/{{ item._id }}">{{ item.name }}</a>
+        <p>{{ item.price | currency:"£"}}</p>
+        <p></p>
+      </div>
+    </div>
+  </li>
 </ul>

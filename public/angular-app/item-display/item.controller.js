@@ -7,19 +7,30 @@ function ItemController($route, $routeParams, itemDataFactory) {
   var tenPound = "6P3WQSGSTLKPQ"
 
   vm.button = "Add To Cart";
+  vm.show = true;
 
   console.log(itemId);
 
-  itemDataFactory.itemDisplay(itemId).then(function(response) {
-    console.log(response);
-    vm.item = response.data;
-    if (vm.item.stock == 0) {
-      vm.button = "Out of Stock";
-    }
-    if (vm.item.price == 10) {
-      vm.pricecode = tenPound;
-    } else if (vm.item.price == 5) {
-      vm.pricecode = fivePound
-    }
+  itemDataFactory.stock(itemId).then(function(response) {
+      vm.stock = response.data;
+      vm.show = false;
   });
+
+  itemDataFactory.itemDisplay(itemId).then(function(response) {
+    vm.item = response.data;
+  });
+
+  vm.tab = 1;
+
+  vm.class = "active";
+
+  vm.setTab = function(newTab){
+      vm.tab = newTab;
+  };
+
+  vm.isSet = function(tabNum){
+      return vm.tab == tabNum;
+  };
+
+
 }
