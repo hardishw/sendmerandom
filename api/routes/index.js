@@ -6,6 +6,13 @@ var itemsCtrl = require("../controllers/items.controllers");
 var reviewCtrl = require("../controllers/reviews.controllers");
 var ipnCtrl = require("../controllers/ipn.controller");
 var pdtCtrl = require("../controllers/pdt.controller");
+var jokesCtrl = require("../controllers/jokes.controller");
+
+// Jokes routes
+router
+  .route("/jokes")
+  .get(jokesCtrl.jokesGetAll)
+  .post(jokesCtrl.jokesAddOne);
 
 // Paypal ipn routes
 router

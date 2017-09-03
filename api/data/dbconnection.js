@@ -39,3 +39,4 @@ process.on('SIGINT', function() {
 // BRING IN YOUR SCHEMAS & MODELS
 require("./items.model");
 require("./users.model");
+require("./jokes.model");

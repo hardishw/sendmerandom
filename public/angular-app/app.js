@@ -4,7 +4,9 @@ function config($routeProvider) {
 
   $routeProvider
     .when("/",{
-      templateUrl: "angular-app/main/main.html"
+      templateUrl: "angular-app/main/main.html",
+      controller: MainController,
+      controllerAs: "vm"
     })
     .when("/products",{
       templateUrl: "angular-app/item-list/items.html",

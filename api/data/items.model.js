@@ -34,6 +34,7 @@ var itemSchema = new mongoose.Schema({
     required: true
   },
   description: String,
+  productInformation: String,
   images: [String],
   reviews: [reviewSchema],
   avgRating: {

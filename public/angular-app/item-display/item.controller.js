@@ -1,15 +1,13 @@
 angular.module("sendmerandom").controller("ItemController", ItemController);
 
-function ItemController($route, $routeParams, itemDataFactory) {
+function ItemController($route, $routeParams, itemDataFactory, JokesService) {
   var vm = this;
   var itemId = $routeParams.itemId
-  var fivePound = "B5CCBH8THMCCW"
-  var tenPound = "6P3WQSGSTLKPQ"
 
   vm.button = "Add To Cart";
   vm.show = true;
-
-  console.log(itemId);
+  vm.punchline = JokesService.getPunchline();
+  vm.tab = 1;
 
   itemDataFactory.stock(itemId).then(function(response) {
       vm.stock = response.data;
@@ -18,11 +16,8 @@ function ItemController($route, $routeParams, itemDataFactory) {
 
   itemDataFactory.itemDisplay(itemId).then(function(response) {
     vm.item = response.data;
+    vm.buttonId = vm.item.buttonId;
   });
-
-  vm.tab = 1;
-
-  vm.class = "active";
 
   vm.setTab = function(newTab){
       vm.tab = newTab;
@@ -31,6 +26,4 @@ function ItemController($route, $routeParams, itemDataFactory) {
   vm.isSet = function(tabNum){
       return vm.tab == tabNum;
   };
-
-
 }
