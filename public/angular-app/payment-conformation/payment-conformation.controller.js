@@ -17,6 +17,6 @@ function PaymentConformation($http,$location) {
   var tx = $location.search().tx;
 
   $http.get("/api/pdt/" + tx).then(function (response) {
-    vm.output = response.data;
+    vm.output = response.data.split(" ");
   });
 }
