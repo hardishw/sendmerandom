@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-var dburl = 'mongodb://db:27017/sendmerandom';
+var dburl = 'mongodb://localhost:27017/sendmerandom';
 var retry = null;
 mongoose.connect(dburl, { useMongoClient: true });
 
