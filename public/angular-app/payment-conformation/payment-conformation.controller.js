@@ -16,14 +16,12 @@ function PaymentConformation($http,$location) {
       pdt[key] = value;
     }
 
-    for (i= 1; i < pdt["num_cart_items"];i++){
+    for (i= 1; i < parseInt(pdt["num_cart_items"]) + 1;i++){
       vm.cart[i-1]=pdt["item_name"+i];
     }
 
+    vm.payment_status = vm.output[0];
+
   });
-
-  vm.payment_status = vm.output[0];
-
-
 
 }
