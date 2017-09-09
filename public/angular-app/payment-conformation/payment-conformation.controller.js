@@ -18,8 +18,8 @@ function PaymentConformation($http,$location) {
 
     for (i= 1; i < parseInt(pdt["num_cart_items"]) + 1;i++){
       var item = {};
-      var item.name=pdt["item_name"+i];
-      var item.qty=pdt["quantity"+i]
+      var item["name"]=pdt["item_name"+i];
+      var item["qty"]=pdt["quantity"+i]
       vm.cart[i-1]=item;
     }
 
