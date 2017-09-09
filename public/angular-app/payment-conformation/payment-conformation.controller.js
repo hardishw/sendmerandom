@@ -24,10 +24,10 @@ function PaymentConformation($http,$location) {
     }
 
     vm.payment_status = vm.output[0];
-    vm.pdt.address_street=vm.pdt.address_street.replace("+"," ");
-    vm.pdt.address_city=vm.pdt.address_city.replace("+"," ");
-    vm.pdt.address_state=vm.pdt.address_state.replace("+"," ");
-    vm.pdt.address_zip=vm.pdt.address_zip.replace("+"," ");
+    vm.pdt.address_street=vm.pdt.address_street.replace(/\+/g," ");
+    vm.pdt.address_city=vm.pdt.address_city.replace(/\+/g," ");
+    vm.pdt.address_state=vm.pdt.address_state.replace(/\+/g," ");
+    vm.pdt.address_zip=vm.pdt.address_zip.replace(/\+/g," ");
 
   });
 
