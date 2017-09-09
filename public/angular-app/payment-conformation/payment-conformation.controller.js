@@ -19,7 +19,7 @@ function PaymentConformation($http,$location) {
     for (i= 1; i < parseInt(vm.pdt["num_cart_items"]) + 1;i++){
       var item = {};
       item["name"]=vm.pdt["item_name"+i];
-      item["qty"]=cm.pdt["quantity"+i]
+      item["qty"]=vm.pdt["quantity"+i]
       vm.cart[i-1]=item;
     }
 
